@@ -10,3 +10,14 @@ def characters_in_text(text):
         else:
             characters_dict[ch] = 1
     return characters_dict
+
+def sort_characters(chars):
+    list_of_dict = []
+    for char in chars:
+        counts = chars[char]
+        if char.isalpha() == True:
+            list_of_dict.append({"char": char, "num": counts})
+    list_of_dict.sort(key=lambda item: item["num"], reverse=True)
+    return list_of_dict
+
+    
